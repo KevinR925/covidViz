@@ -14,6 +14,9 @@ import dataset3 from '@/views/DataSet3.vue'
 import chart7 from '@/views/Chart7.vue'
 import chart8 from '@/views/Chart8.vue'
 import chart9 from '@/views/Chart9.vue'
+import dataset4 from '@/views/DataSet4.vue'
+import chart10 from '@/views/Chart10.vue'
+import chart11 from '@/views/Chart11.vue'
 
 Vue.use(Router)
 
@@ -95,6 +98,24 @@ export default new Router({
           path: '/chart9',
           name: 'chart9',
           component: chart9
+        }
+      ]
+    },
+    {
+      path: '/dataset4',
+      name: 'dataset4',
+      component: dataset4,
+      redirect:'/chart10',
+      children:[
+        {
+          path: '/chart10',
+          name: 'chart10',
+          component: chart10
+        },
+        {
+          path: '/chart11',
+          name: 'chart11',
+          component: chart11
         }
       ]
     }

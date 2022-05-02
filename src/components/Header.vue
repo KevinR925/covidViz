@@ -25,7 +25,7 @@
       <el-button class="btn" type="primary" @click="gotolink3"
         >China</el-button
       >
-      <el-button class="btn" type="primary" @click="gotolink3"
+      <el-button class="btn" type="primary" @click="gotolink4"
         >Comparison</el-button
       >
     </el-menu>
@@ -46,6 +46,9 @@ export default {
     },
     gotolink3() {
       this.$router.replace("/dataset3");
+    },
+    gotolink4() {
+      this.$router.replace("/dataset4");
     },
   },
 };
