@@ -16,15 +16,15 @@
         
         <el-menu-item :class="{'activeDashboard':style1}" index="/chart4">
           <!-- <i class="el-icon-setting"></i> -->
-          <span slot="title">2-1</span>
+          <span slot="title">Age Group</span>
         </el-menu-item>
         <el-menu-item :class="{'activeProfile':style2}"  index="/chart5">
           <!-- <i class="el-icon-setting"></i> -->
-          <span slot="title">2-2</span>
+          <span slot="title">Vaccination Situation</span>
         </el-menu-item>
         <el-menu-item :class="{'activeStatus':style3}"  index="/chart6">
           <!-- <i class="el-icon-setting"></i> -->
-          <span slot="title">2-3</span>
+          <span slot="title">Daily Case Count</span>
         </el-menu-item>
         
       </el-menu>
@@ -35,10 +35,9 @@
       <router-view></router-view>
     </el-main>
 
-    <el-footer>
-      <!-- eslint-disable -->
+    <!-- <el-footer>
       <Footer class="header"></Footer>
-    </el-footer>
+    </el-footer> -->
   </el-container>
 </template>
 

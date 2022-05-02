@@ -4,7 +4,7 @@
       <el-main>
         <div class="testEchart">
           <el-card>
-            <div id="main"></div>
+            <div class="chartCard" id="main"></div>
           </el-card>
         </div>
       </el-main>
@@ -19,35 +19,62 @@ export default {
     var mainContainer = document.getElementById("main");
     //Used to make the chart adaptive to height and width, and calculate the height and width of the container through the height and width of the form
     var resizeMainContainer = function () {
-      mainContainer.style.width = window.innerWidth + "px";
-      mainContainer.style.height = window.innerHeight * 0.8 + "px";
+      mainContainer.style.width = 100 + "%";
+      mainContainer.style.height = 1000 + "px";
     };
     //Set the height and width of the div container
     resizeMainContainer();
-    //  // Initialize the chart
-    //  var mainChart = this.$echarts.init(mainContainer);
-    //  $(window).on('resize',function(){//
-    //      //The screen size is adaptive, reset the height and width of the container
-    //     resizeMainContainer();
-    //     mainChart.resize();
-    // });
 
     var mychart = this.$echarts.init(document.getElementById("main"));
     mychart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: {
+          // Use axis to trigger tooltip
+          type: "shadow", // 'shadow' as default; can also be 'line' or 'shadow'
+        },
+      },
+      legend: {},
       title: {
-        text: "test",
+        text: "Confirmed age group"
+      },
+      grid: {
+        left: "3%",
+        right: "4%",
+        bottom: "3%",
+        containLabel: true,
       },
       xAxis: {
-        type: "category",
-        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        type: "value",
       },
       yAxis: {
-        type: "value",
+        type: "category",
+        data: ["Age 0-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49","Age 50-54", "Age 55-59", "Age 60-64", "Age 65-69", "Age 70+" ],
       },
       series: [
         {
-          data: [150, 230, 224, 218, 135, 147, 260],
-          type: "line",
+          name: "PCR confirmed",
+          type: "bar",
+          stack: "total",
+          label: {
+            show: true,
+          },
+          emphasis: {
+            focus: "series",
+          },
+          data: [810, 338, 426, 403, 354, 319, 291, 340, 302, 291, 214, 535],
+        },
+        {
+          name: "Not Confirmed",
+          type: "bar",
+          stack: "total",
+          label: {
+            show: true,
+          },
+          emphasis: {
+            focus: "series",
+          },
+          data: [1395, 520, 577, 616, 632, 535, 476, 380, 313, 252, 194, 309],
         },
       ],
     });
@@ -57,8 +84,9 @@ export default {
 
 <style scoped>
 .chart1 {
+  display: flex;
   position: absolute;
-  top: 8%;
+  top: 10%;
   left: 22%;
   right: 0%;
   /* width: 40%; */
@@ -66,5 +94,15 @@ export default {
   padding-left: 7%;
   padding-right: 7%;
   /* background-color: #dddddd3a; */
+}
+.testEchart {
+  position: absolute;
+  height: 70%;
+  width: 80%;
+}
+.chartCard {
+  position: flex;
+  height: 70%;
+  width: 80%;
 }
 </style>
