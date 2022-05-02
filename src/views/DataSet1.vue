@@ -35,10 +35,7 @@
       <router-view></router-view>
     </el-main>
 
-    <el-footer>
-      <!-- eslint-disable -->
-      <Footer class="header"></Footer>
-    </el-footer>
+
   </el-container>
 </template>
 
