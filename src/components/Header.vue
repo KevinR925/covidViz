@@ -17,13 +17,16 @@
       </div>
 
       <el-button class="btn" type="primary" @click="gotolink1"
-        >Dataset1</el-button
+        >America</el-button
       >
       <el-button class="btn" type="primary" @click="gotolink2"
-        >Dataset2</el-button
+        >Australia</el-button
       >
       <el-button class="btn" type="primary" @click="gotolink3"
-        >Dataset3</el-button
+        >China</el-button
+      >
+      <el-button class="btn" type="primary" @click="gotolink3"
+        >Comparison</el-button
       >
     </el-menu>
   </div>
