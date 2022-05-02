@@ -4,7 +4,7 @@
       <el-main>
         <div class="testEchart">
           <el-card>
-            <div class="chartCard" id="main"></div>
+            <div class="chartCard" id="main" style="overflow-y:hidden;overflow-x:scroll;height:100%"></div>
           </el-card>
         </div>
       </el-main>
