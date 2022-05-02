@@ -20,7 +20,7 @@ export default {
     //Used to make the chart adaptive to height and width, and calculate the height and width of the container through the height and width of the form
     var resizeMainContainer = function () {
       mainContainer.style.width = 100 + "%";
-      mainContainer.style.height = 1000 + "px";
+      mainContainer.style.height = 900 + "px";
     };
     //Set the height and width of the div container
     resizeMainContainer();
@@ -91,12 +91,12 @@ export default {
 }
 .testEchart {
   position: absolute;
-  height: 70%;
+  height: 60%;
   width: 80%;
 }
 .chartCard {
   position: flex;
-  height: 70%;
+  height: 60%;
   width: 80%;
 }
 </style>

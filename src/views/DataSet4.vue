@@ -14,13 +14,13 @@
         :router="true"
       >
         
-        <el-menu-item :class="{'activeDashboard':style1}" index="/chart4">
+        <el-menu-item :class="{'activeDashboard':style1}" index="/chart10">
           <!-- <i class="el-icon-setting"></i> -->
           <span slot="title">4-1</span>
         </el-menu-item>
-        <el-menu-item :class="{'activeProfile':style2}"  index="/chart5">
+        <el-menu-item :class="{'activeProfile':style2}"  index="/chart11">
           <!-- <i class="el-icon-setting"></i> -->
-          <span slot="title">4-2</span>
+          <span slot="title">Vaccination</span>
         </el-menu-item>
         
       </el-menu>
