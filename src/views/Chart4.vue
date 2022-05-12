@@ -4,11 +4,21 @@
       <el-main>
         <div class="testEchart">
           <el-card>
-            <div class="chartCard" id="main" style="overflow-y:hidden;overflow-x:scroll;height:100%"></div>
+            <div
+              class="chartCard"
+              id="main"
+              style="overflow-y: hidden; overflow-x: scroll; height: 100%"
+            ></div>
+          </el-card>
+          <el-card>
+            <div  class="content">
+              <br>This page shows the daily new case in different age group.
+              <br>Data for this chart: https://data.nsw.gov.au/data/dataset/nsw-covid-19-cases-by-age-range
+            </div>
           </el-card>
         </div>
       </el-main>
-      <el-footer>Footer</el-footer>
+      <el-footer> </el-footer>
     </el-container>
   </div>
 </template>
@@ -20,7 +30,7 @@ export default {
     //Used to make the chart adaptive to height and width, and calculate the height and width of the container through the height and width of the form
     var resizeMainContainer = function () {
       mainContainer.style.width = 100 + "%";
-      mainContainer.style.height = 1000 + "px";
+      mainContainer.style.height = 900 + "px";
     };
     //Set the height and width of the div container
     resizeMainContainer();
@@ -36,7 +46,7 @@ export default {
       },
       legend: {},
       title: {
-        text: "Confirmed age group"
+        text: "Daily case in each age",
       },
       grid: {
         left: "3%",
@@ -49,7 +59,20 @@ export default {
       },
       yAxis: {
         type: "category",
-        data: ["Age 0-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49","Age 50-54", "Age 55-59", "Age 60-64", "Age 65-69", "Age 70+" ],
+        data: [
+          "Age 0-19",
+          "Age 20-24",
+          "Age 25-29",
+          "Age 30-34",
+          "Age 35-39",
+          "Age 40-44",
+          "Age 45-49",
+          "Age 50-54",
+          "Age 55-59",
+          "Age 60-64",
+          "Age 65-69",
+          "Age 70+",
+        ],
       },
       series: [
         {
@@ -94,15 +117,19 @@ export default {
   padding-left: 7%;
   padding-right: 7%;
   /* background-color: #dddddd3a; */
+  padding-bottom: 150px;
 }
 .testEchart {
   position: absolute;
   height: 70%;
   width: 80%;
+  padding-bottom: 150px;
 }
 .chartCard {
   position: flex;
   height: 70%;
   width: 80%;
 }
+
+
 </style>

@@ -1,7 +1,13 @@
 <!-- eslint-disable -->
 <template>
 <div>
-    <div class="footer"></div>
+    <div class="footer">
+      <div class = "content">
+        <br>Overall Design and Australia dataset: Xiaofeng Ren
+        <br>America dataset: Pengyu Zhang
+        <br>China dataset(Outside Webpage): Bo Wang
+      </div>
+    </div>
 </div>
 </template>
 
@@ -17,7 +23,7 @@ export default {
 <style scoped>
 .footer {
     width: 100%;
-    height: 100px;
+    height: 90px;
     background-color: grey;
     position: fixed;
     left: 0;

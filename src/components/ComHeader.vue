@@ -25,7 +25,7 @@
       <el-button class="btn" type="info" @click="gotolink3"
         >China</el-button
       >
-      <el-button class="btn" type="info" @click="gotolink4"
+      <el-button class="btn" type="warning" @click="gotolink4"
         >Comparison</el-button
       >
     </el-menu>

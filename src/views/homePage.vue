@@ -15,6 +15,31 @@
       </el-main>
     </el-container>
 
+
+    <div
+      class="body"
+      style="margin:50px; autp;display:flex;justify-content:space-around"
+    >
+      <div>
+        <div style="margin-top: -100px; font-weight: 700">
+          Show the epidemic situation in each country
+        </div>
+        <img :src="Covid" style="width:100px;height:100px;">
+      </div>
+      <div>
+        <div style="margin-top: -100px; font-weight: 700">
+          Visualize data
+        </div>
+        <img :src="Visual" style="width:100px;height:100px;">
+      </div>
+      <div>
+        <div style="margin-top: -100px; font-weight: 700">
+          Analyze the relationship between data
+        </div>
+        <img :src="Analyze" style="width:100px;height:100px;">
+      </div>
+    </div>
+
     <el-footer>
       <!-- eslint-disable -->
       <Footer class="header"></Footer>
@@ -29,6 +54,10 @@ export default {
   data() {
     return {
       img001: require("@/static/covidData.png"),
+      Covid: require("@/static/covid.png"),
+      Visual: require("@/static/visualization.png"),
+      Analyze: require("@/static/analysis.png"),
+
     };
   },
   components: {
@@ -59,4 +88,5 @@ export default {
   text-align: center;
   overflow: hidden;
 }
+
 </style>

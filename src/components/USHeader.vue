@@ -16,7 +16,7 @@
         ></router-link>
       </div>
 
-      <el-button class="btn" type="info" @click="gotolink1"
+      <el-button class="btn" type="warning" @click="gotolink1"
         >America</el-button
       >
       <el-button class="btn" type="info" @click="gotolink2"

@@ -19,7 +19,7 @@
       <el-button class="btn" type="info" @click="gotolink1"
         >America</el-button
       >
-      <el-button class="btn" type="info" @click="gotolink2"
+      <el-button class="btn" type="warning" @click="gotolink2"
         >Australia</el-button
       >
       <el-button class="btn" type="info" @click="gotolink3"
@@ -47,8 +47,6 @@ export default {
       this.$router.replace("/dataset2");
     },
     gotolink3() {
-      //this.$router.push("http://52.78.15.53:5000/");
-      //this.$router.push({ path:  'http://52.78.15.53:5000/' })
       window.open('http://3.36.91.40:5000/', '_blank') 
     },
     gotolink4() {

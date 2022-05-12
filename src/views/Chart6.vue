@@ -10,6 +10,12 @@
               style="overflow-y: hidden; overflow-x: scroll; height: 100%"
             ></div>
           </el-card>
+          <el-card>
+            <div class="content">
+            <br>This chart demonstrate the overall Situation in this month
+            <br>Data for this chart: https://www.covid19data.com.au/
+          </div>
+          </el-card>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>
@@ -24,50 +30,25 @@ export default {
     //Used to make the chart adaptive to height and width, and calculate the height and width of the container through the height and width of the form
     var resizeMainContainer = function () {
       mainContainer.style.width = 100 + "%";
-      mainContainer.style.height = 700 + "px";
+      mainContainer.style.height = 600 + "px";
     };
     //Set the height and width of the div container
     resizeMainContainer();
 
     var mychart = this.$echarts.init(document.getElementById("main"));
 
-    // var getVirtulData = function() {
-    //   var year = '2022';
-    //   var date = this.$echarts.number.parseDate(year + '-01-01');
-    //   var end = +echarts.number.parseDate(+year + 1 + '-01-01');
-    //   var dayTime = 3600 * 24 * 1000;
-    //   var data = [];
-    //   for (var time = date; time < end; time += dayTime) {
-    //     data.push([
-    //       echarts.format.formatTime('yyyy-MM-dd', time),
-    //       Math.floor(Math.random() * 10000)
-    //     ]);
-    //   }
-    //   return data;
-    // };
-
-    // var damidata = getVirtulData();
-
     mychart.setOption({
       title: {
         top: 30,
         left: "center",
-        text: "Daily Case Count",
+        text: "Monthly Case Count in Australia",
       },
       tooltip: {
-        formatter(params) {
-          // const item = params[0];
-          //   console.log(params)
-          const item = params[0];
-          return `
-                直接访问：${time}
-                所需天数：${value}
-               `;
-        },
+        
       },
       visualMap: {
         min: 0,
-        max: 10000,
+        max: 40000,
         type: "piecewise",
         orient: "horizontal",
         left: "center",
@@ -81,7 +62,7 @@ export default {
         range: "2022-05",
         orient: "vertical",
         itemStyle: {
-          borderWidth: 0.5,
+          borderWidth: 2.0,
         },
         yearLabel: { show: false },
       },
@@ -89,10 +70,39 @@ export default {
         type: "heatmap",
 
         coordinateSystem: "calendar",
-        //data: [{"2022-04-01": 8000},{"2022-04-02": 8000},{"2022-04-03": 8000},{"2022-04-04": 8000},{"2022-04-05": 8000},{"2022-04-06": 8000},{"2022-04-07": 8000},{"2022-04-08": 8000},{"2022-04-09": 8000},{"2022-04-10": 8000},{"2022-04-11": 8000},{"2022-04-12": 8000},{"2022-04-13": 8000},{"2022-04-14": 8000},{"2022-04-15": 8000},{"2022-04-16": 8000},{"2022-04-17": 8000},{"2022-04-18": 8000},{"2022-04-20": 8000},{"2022-04-21": 8000},{"2022-04-22": 8000},{"2022-04-23": 8000},{"2022-04-24": 8000},{"2022-04-25": 8000},{"2022-04-26": 8000},{"2022-04-27": 8000},{"2022-04-28": 8000},{"2022-04-29": 8000},{"2022-04-30": 8000}],
         data: [
-          ["2022-05-01", 5000],
-          ["2022-05-02", 8000],
+          ["2022-05-01", 18296],
+          ["2022-05-02", 35939],
+          ["2022-05-03", 35940],
+          ["2022-05-04", 16462],
+          ["2022-05-05", 18506],
+          ["2022-05-06", 13835],
+          ["2022-05-07", 11678],
+          ["2022-05-08", 2233],
+          ["2022-05-09", 2234],
+          ["2022-05-10", 4407],
+          ["2022-05-11", 5360],
+          ["2022-05-12", 7349],
+          ["2022-05-13", 4234],
+          ["2022-05-14", 8407],
+          ["2022-05-15", 5360],
+          ["2022-05-16", 7349],
+          ["2022-05-17", 7349],
+          ["2022-05-18", 7349],
+          ["2022-05-19", 7349],
+          ["2022-05-20", 7349],
+          ["2022-05-21", 7349],
+          ["2022-05-22", 7349],
+          ["2022-05-23", 7349],
+          ["2022-05-24", 7349],
+          ["2022-05-25", 7349],
+          ["2022-05-26", 7349],
+          ["2022-05-27", 7349],
+          ["2022-05-28", 7349],
+          ["2022-05-29", 7349],
+          ["2022-05-30", 7349],
+          ["2022-05-31", 7349],
+
         ],
       },
     });

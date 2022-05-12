@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TestCharts from '@/views/TestCharts'
 import homepage from '@/views/homePage.vue'
 import dataset1 from '@/views/DataSet1.vue'
-import chart1 from '@/views/Chart1.vue'
+import USDailyCase from '@/views/Chart1.vue'
 import chart2 from '@/views/Chart2.vue'
 import chart3 from '@/views/Chart3.vue'
 import dataset2 from '@/views/DataSet2.vue'
@@ -23,33 +22,28 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/TestCharts',
-      name: 'TestCharts',
-      component: TestCharts
-    },
-    {
-      path: '/homepage',
+      path: '/',
       name: 'homepage',
       component: homepage
     },
     {
       path: '/dataset1',
-      name: 'dataset1',
+      name: 'dataset2',
       component: dataset1,
-      redirect:'/chart1',
+      redirect:'/USDailyCase',
       children:[
         {
-          path: '/chart1',
-          name: 'chart1',
-          component: chart1
+          path: '/USDailyCase',
+          name: 'USDailyCase',
+          component: USDailyCase
         },
         {
-          path: '/chart2',
+          path: '/USStateCase',
           name: 'chart2',
           component: chart2
         },
         {
-          path: '/chart3',
+          path: '/USMortality',
           name: 'chart3',
           component: chart3
         }
@@ -59,20 +53,20 @@ export default new Router({
       path: '/dataset2',
       name: 'dataset2',
       component: dataset2,
-      redirect:'/chart4',
+      redirect:'/AUDailyCase',
       children:[
         {
-          path: '/chart4',
+          path: '/AUDailyCase',
           name: 'chart4',
           component: chart4
         },
         {
-          path: '/chart5',
+          path: '/AUVaccination',
           name: 'chart5',
           component: chart5
         },
         {
-          path: '/chart6',
+          path: '/AUMonthlyCase',
           name: 'chart6',
           component: chart6
         }
@@ -105,15 +99,15 @@ export default new Router({
       path: '/dataset4',
       name: 'dataset4',
       component: dataset4,
-      redirect:'/chart10',
+      redirect:'/CaseNumber',
       children:[
         {
-          path: '/chart10',
+          path: '/CaseNumber',
           name: 'chart10',
           component: chart10
         },
         {
-          path: '/chart11',
+          path: '/Vaccination',
           name: 'chart11',
           component: chart11
         }

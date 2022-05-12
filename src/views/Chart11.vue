@@ -10,6 +10,13 @@
               style="overflow-y: hidden; overflow-x: scroll; height: 100%"
             ></div>
           </el-card>
+          <el-card>
+            <div class="content">
+              <br>This chart demonstrate how many shots of vaccine did people get averagely in these country. 
+              <br>Data for this chart:
+              https://news.qq.com/zt2020/page/feiyan.htm#/
+            </div>
+          </el-card>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>

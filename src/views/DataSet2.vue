@@ -14,15 +14,15 @@
         :router="true"
       >
         
-        <el-menu-item :class="{'activeDashboard':style1}" index="/chart4">
+        <el-menu-item :class="{'activeDashboard':style1}" index="/AUDailyCase">
           <!-- <i class="el-icon-setting"></i> -->
           <span slot="title">Daily Case</span>
         </el-menu-item>
-        <el-menu-item :class="{'activeProfile':style2}"  index="/chart5">
+        <el-menu-item :class="{'activeProfile':style2}"  index="/AUVaccination">
           <!-- <i class="el-icon-setting"></i> -->
           <span slot="title">Vaccination</span>
         </el-menu-item>
-        <el-menu-item :class="{'activeStatus':style3}"  index="/chart6">
+        <el-menu-item :class="{'activeStatus':style3}"  index="/AUMonthlyCase">
           <!-- <i class="el-icon-setting"></i> -->
           <span slot="title">Monthly Case</span>
         </el-menu-item>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import Header from "../components/Header";
+import Header from "../components/AUHeader";
 import Footer from "../components/Footer";
 export default {
   data() {
@@ -53,17 +53,17 @@ export default {
   watch:{
     $route(to,from){
       //define the path
-      if(to.path === '/chart4') {
+      if(to.path === '/AUDailyCase') {
         this.style1 = true;
         this.style2 = false;
         this.style3 = false;
       }
-      if(to.path === '/chart5') {
+      if(to.path === '/AUVaccination') {
         this.style1 = false;
         this.style2 = true;
         this.style3 = false;
       }
-      if(to.path === '/chart6') {
+      if(to.path === '/AUMonthlyCase') {
         this.style1 = false;
         this.style2 = false;
         this.style3 = true;
@@ -78,6 +78,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .header {
   position: fixed;
@@ -90,14 +91,14 @@ export default {
   position: fixed;
   left: 10%;
   top: 20%;
-  border: #e6e6e6 1px solid;
+  border: #000000 1px solid;
   width: 12%;
   height: 100%;
 }
 
 .avatar-box {
   width: 100%;
-  border: #e6e6e6 1px solid;
+  border: #000000 1px solid;
   text-align: center;
   display: flex;
   height: 170px;
@@ -105,15 +106,12 @@ export default {
   align-items: center;
 }
 
-.side-user-icon {
-  font-size: 60px;
-}
 
 .el-menu-item {
   width: 100%;
   text-align: center;
   font-size: 18px;
-  border-bottom: #e6e6e6 1px solid;
+  border-bottom: #000000 1px solid;
   color: #838485;
 }
 
@@ -125,39 +123,4 @@ export default {
   background-color: rgba(128, 128, 128, 0.308);
 }
 
-.activeJobList{
-  color:#b9771498;
-  background-color: rgba(128, 128, 128, 0.308);
-}
-.activeProfile {
-  color:#b9771498;
-  background-color: rgba(128, 128, 128, 0.308);
-}
-.activeMessage {
-  color:#b9771498;
-  background-color: rgba(128, 128, 128, 0.308);
-}
-.avatar-uploader .el-upload {
-    border: 1px dashed #d9d9d9;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  .avatar-uploader .el-upload:hover {
-    border-color: #409EFF;
-  }
-  .avatar-uploader-icon {
-    font-size: 28px;
-    color: #8c939d;
-    width: 178px;
-    height: 178px;
-    line-height: 178px;
-    text-align: center;
-  }
-  .avatar {
-    width: 178px;
-    height: 178px;
-    display: block;
-  }
 </style>
