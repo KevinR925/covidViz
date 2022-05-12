@@ -46,6 +46,8 @@ export default {
         trigger: "item",
       },
       legend: {
+        x:'right',
+        
         data: ["Two Vaccination", "Booster", "Population"],
       },
       radar: {

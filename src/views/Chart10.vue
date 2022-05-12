@@ -27,7 +27,7 @@ export default {
     //Used to make the chart adaptive to height and width, and calculate the height and width of the container through the height and width of the form
     var resizeMainContainer = function () {
       mainContainer.style.width = 130 + "%";
-      mainContainer.style.height = 650 + "px";
+      mainContainer.style.height = 600 + "px";
     };
     //Set the height and width of the div container
     resizeMainContainer();
