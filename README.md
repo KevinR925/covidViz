@@ -1,6 +1,6 @@
 # covid19-data-viz
 
-> A Vue.js project
+> A data visualization project for Covid-19 trends in Australia, America and China
 
 ## Build Setup
 
