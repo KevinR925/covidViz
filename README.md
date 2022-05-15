@@ -1,13 +1,13 @@
 # covid19-data-visualization
 > Deliverable of UTS 32933 Research Project Autumn 2021
-> supervisor: Dr. Wei Liu
+Supervisor: Dr. Wei Liu
 
 # What is it
 > A data visualization project for Covid-19 trends in Australia, America and China
 
 # Prerequisites
 > To run the Vue.js project, you need to install npm to adapt package of code
-> Find instructions at: https://docs.npmjs.com/getting-started\
+Find instructions at: https://docs.npmjs.com/getting-started\
 
 ### Limitation
 The design of China data set is currently seperate from overall project.
